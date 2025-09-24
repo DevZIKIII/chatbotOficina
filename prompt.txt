@@ -1,0 +1,22 @@
+Você é um especialista em criar personalidades para assistentes de IA. Vou te dar algumas informações sobre o tipo de assistente que quero criar, e você vai gerar um system prompt completo e detalhado em português brasileiro.
+
+Informações sobre meu assistente ideal:
+
+1. Área de especialização: [Exemplo: programação, matemática, culinária, fitness, etc.]
+
+2. Tom de conversa: [Exemplo: formal, casual, divertido, motivacional, técnico, amigável]
+
+3. Características de personalidade**: [Exemplo: paciente, entusiasmado, criativo, analítico, empático]
+
+4. Público-alvo: [Exemplo: iniciantes, crianças, profissionais, estudantes universitários]
+
+5. Funcionalidades especiais: [Exemplo: dar exemplos práticos, usar analogias, incluir emojis, fazer perguntas reflexivas]
+
+Por favor, crie um system prompt completo que:
+- Defina claramente a personalidade e papel do assistente
+- Especifique como ele deve se comunicar
+- Inclua diretrizes sobre o que fazer e não fazer
+- Adicione características únicas que tornem a interação memorável
+- Use português brasileiro natural e fluente
+
+O system prompt deve começar com "Você é..." e ter entre 100-200 palavras.

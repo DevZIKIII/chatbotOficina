@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lab - Seu Assistente Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">🤖</div>
+                <span class="logo-text">AI Lab</span>
+            </div>
+            <button class="new-chat-btn" onclick="newChat()">
+                <span>➕</span> Nova Conversa
+            </button>
+        </div>
+        <div class="chat-history" id="chatHistory">
+            </div>
+        <div class="sidebar-footer">
+            <button class="config-button-footer" onclick="toggleConfig()" title="Configurações">
+                <span>🔑</span> Link API KEY
+            </button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header class="chat-header">
+             <div class="header-info">
+                <div class="status-indicator"></div>
+                <div id="modelInfo">
+                    <span class="model-badge">Gemini-2.0-Flash</span>
+                </div>
+            </div>
+        </header>
+
+         <div class="config-panel" id="configPanel">
+            <button class="config-close-btn" onclick="toggleConfig()" title="Fechar">
+                ✕
+            </button>
+            <div class="config-section">
+                <h4>🔑 API Key do Gemini</h4>
+                <p class="config-description">Obtenha sua API Key gratuitamente:</p>
+                <a href="https://aistudio.google.com/apikey" target="_blank" class="api-key-link">
+                    🔗 Gerar API Key no Google AI Studio
+                </a>
+            </div>
+        </div>
+
+
+        <main class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                </div>
+
+            <div class="thinking-indicator" id="thinkingIndicator">
+                 <div class="neural-thinking">
+                    <div class="neural-nodes">
+                        <div class="neural-node-thinking"></div>
+                        <div class="neural-node-thinking"></div>
+                        <div class="neural-node-thinking"></div>
+                    </div>
+                    <span class="thinking-text">Processando...</span>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <div class="input-wrapper-centered">
+                    <div class="input-wrapper">
+                        <textarea
+                            id="messageInput"
+                            placeholder="Digite sua pergunta ou comando mágico..."
+                            onkeydown="handleKeyPress(event)"
+                            oninput="autoResize(this)"
+                            rows="1"
+                        ></textarea>
+                        <button id="sendButton" onclick="sendMessage()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
